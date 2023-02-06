@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import photo from "../"
+import photo from "../images/image.jpg"
+import electronicsImg from "../images/electronics.jpg"
+import jewelery from "../images/jewels.jpeg"
 
 export default function TopCategories() {
     const[menCat, setMenCat] = useState([]);
@@ -17,7 +19,18 @@ export default function TopCategories() {
         getData();
     },[])
 
-    console.log(menCat)
+    console.log(menCat);
+
+    function hangleImages(item){
+        if(item ==="electronics"){
+            return electronicsImg;
+        }else if(item === "jewelery"){
+            return photo
+        }
+        else{
+            return photo
+        }
+    }
 
 
     return(
@@ -28,8 +41,8 @@ export default function TopCategories() {
             <div className="itemsContainer">
                 {menCat? menCat.map(item =>(
                     <div className="itemCard" key={item.id}>
-                        <h3>{item}</h3>
-                        <img src=""/>
+                        <p>{item}</p>
+                        <img src={hangleImages(item)}/>
                     </div>
                 )): ""}
             </div>
