@@ -1,0 +1,65 @@
+.App{
+  background-color: #F5F5F5;
+}
+.appContainer{
+  background-color: white;
+}
+/* nav bar styles */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  height:10vh;
+  padding: 5px 10px;
+  background-color: white;
+  box-shadow: 1px 1px 10px 1px #adabab;
+
+}
+
+.navLogo {
+  display: flex;
+}
+
+/* SEARCH BAR STYLES */
+
+
+/* HOME STYLES */
+.homecover{ 
+  top: 0;
+  background-image: url("../images/banner-image-tall.jpg");
+  background-size: cover;
+  text-align: center;
+  padding-top: 3%;
+  height: 80vh;
+}
+.homecover p{
+  font-size: 30px;
+  /* font-weight: 0; */
+}
+
+.searchHome input{
+  width: 40%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding-left: 15px;
+  /* box-shadow: 10px 10px 10px 10px #EAEFF2; */
+  box-shadow: 1px 1px 10px 10px #ececec;
+}
+
+.searchHome button{
+  padding-left: 25px;
+  padding-right:25px;
+  height: inherit;
+  height: 39px;
+  margin-left: -7%;
+  font-size: 15px;
+  background-color: rgb(238,153,91);
+  color: white;
+  border: none;
+  border-radius:0px 5px 5px 0px;
+}
+
+.itemsContainer{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
