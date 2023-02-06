@@ -85,3 +85,7 @@ hr{
 .itemCard img {
   border: 1px solid;
 }
+
+.topdealsImg{
+  height: 20vh;
+}

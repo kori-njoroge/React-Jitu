@@ -39,8 +39,8 @@ export default function TopCategories() {
             <h2>Top Catgories</h2>
             <hr/>
             <div className="itemsContainer">
-                {menCat? menCat.map(item =>(
-                    <div className="itemCard" key={item.id}>
+                {menCat? menCat.map((item, index) =>(
+                    <div className="itemCard" key={index}>
                         <p>{item}</p>
                         <img src={hangleImages(item)}/>
                     </div>
