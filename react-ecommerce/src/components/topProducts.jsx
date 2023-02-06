@@ -1,13 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ListItems from "./listItems";
 
 export default function TopProducts() {
+    const [topProducts, setTopProducts] = useState([]);
+
+    useEffect(() => {
+        async function getData() {
+            let elec = await fetch("https://fakestoreapi.com/products/category/electronics?limit=2")
+            let data = await fetch("https://fakestoreapi.com/products/category/men's clothing?limit=4");
+            let data2 = await fetch("https://fakestoreapi.com/products/category/women's clothing?limit=4");
+            let electronics = await elec.json();
+            let men = await data.json();
+            let women = await data2.json();
+            console.log("men", men)
+            setTopProducts([ ...women,...electronics, ...men]);
+        }
+        getData()
+    }, [topProducts])
+
+
+
     return (
         <div className="topProducts">
             <hr />
             <h2>Top Products</h2>
             <hr />
-            <div className="itemContainer">
-                <h6>item container</h6>
+            <div className="itemsContainer">
+            {topProducts ? topProducts.map(item => (
+                    <ListItems item={item} />
+                )) : ''}
             </div>
         </div>
     )
