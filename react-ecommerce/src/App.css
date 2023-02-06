@@ -10,11 +10,11 @@
 /* nav bar styles */
 .navBar {
   display: flex;
-  justify-content: space-between;
-  height: 10vh;
-  padding: 5px 10px;
+  height: 15vh;
+  padding: 0px 10px;
   background-color: white;
   box-shadow: 1px 1px 10px 1px #adabab;
+  align-items: center;
 }
 
 hr {
@@ -24,8 +24,36 @@ hr {
 .navLogo {
   display: flex;
 }
+.navLogo img{
+  height: 50px;
+  margin-top: 10px;
+}
 
-/* SEARCH BAR STYLES */
+.navLogo h1{
+  color: #46439A;
+}
+.allCategories{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 1%;
+  padding:0px 15px;
+  background-color: #358DC7;
+  color: white;
+}
+.fa-bars {
+  margin-left: 20px;
+  font-size: 20px;
+}
+.topDeals,.topProducts,.topCat{
+  margin-left:20px;
+  color: #5E5E5E;
+  font-weight: 500;
+}
+a{
+  text-decoration: none;
+  color: #5E5E5E;
+}
 
 
 /* HOME STYLES */
@@ -38,32 +66,41 @@ hr {
   height: 80vh;
 }
 
+
 .homecover p {
   font-size: 30px;
   /* font-weight: 0; */
 }
 
-.searchHome input {
-  width: 40%;
+/* SEARCH BAR STYLES */
+.searchBar{
+  border: 1px solid;
+  height: 50px;
+}
+
+.searchHere {
+  height: 100%;
+  width: 30%;
+  /*
   height: 35px;
   border-radius: 5px;
   border: 1px solid grey;
   padding-left: 15px;
-  /* box-shadow: 10px 10px 10px 10px #EAEFF2; */
-  box-shadow: 1px 1px 10px 10px #ececec;
+  box-shadow: 1px 1px 10px 10px #ececec; */
 }
 
-.searchHome button {
+.search {
+  height: 100%;
   padding-left: 25px;
   padding-right: 25px;
-  height: inherit;
+  /*height: inherit;
   height: 39px;
   margin-left: -7%;
   font-size: 15px;
   background-color: rgb(238, 153, 91);
   color: white;
   border: none;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 0px 5px 5px 0px; */
 }
 
 .itemsContainer {
@@ -93,9 +130,7 @@ hr {
 .topdealsImg {
   height: 20vh;
 }
-.itemTitle{
-  /* min-height: 20%; */
-}
+
 .price{
   color: #F58B56;
 }

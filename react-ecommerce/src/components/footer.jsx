@@ -55,6 +55,8 @@ export default function Footer() {
                     <li className='list' ><img src={france} alt="country"/>France</li>
                     <li className='list' ><img src={germany} alt="country"/>Germany</li>
                     <li className='list' ><img src={italy} alt="country"/>Italy</li>
+                    <li className='list' ><img src={usa} alt="country"/>United States</li>
+                    <li className='list' ><img src={uk} alt="country"/>United Kingdom</li>
                     {/* <li><img src={uk} alt="country"/>United Kingdom</li> */}
                 </ul>
             </div>

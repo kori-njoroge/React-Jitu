@@ -13,11 +13,10 @@ export default function TopDeals() {
             let electronics = await elec.json();
             let men = await data.json();
             let women = await data2.json();
-            console.log("men", men)
             setTopDeals([...electronics, ...men, ...women]);
         }
         getData()
-    }, [topDeals])
+    }, [])
 
     return (
         <div className="topDeals" id="topDeals">

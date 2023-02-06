@@ -19,7 +19,6 @@ export default function TopCategories() {
         getData();
     },[])
 
-    console.log(menCat);
 
     function hangleImages(item){
         if(item ==="electronics"){

@@ -12,11 +12,10 @@ export default function TopProducts() {
             let electronics = await elec.json();
             let men = await data.json();
             let women = await data2.json();
-            console.log("men", men)
             setTopProducts([ ...women,...electronics, ...men]);
         }
         getData()
-    }, [topProducts])
+    }, [])
 
 
 
