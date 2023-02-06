@@ -211,11 +211,14 @@ a{
 } 
 .imageContainer{
   height: 80vh;
-  /* border: 1px solid; */
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .imageContainer img{
-  height: 100%;
-  padding: 0px 50px;
+  height: 80%;
+
 }
 .productDescription{
   margin-left: 10;
@@ -224,6 +227,13 @@ a{
   color: yellow;
 }
 
+.quantity button{
+  padding: 0px 15px;
+  margin:0px 10px;
+}
+.itemno{
+  padding: 0px 5px;
+}
 
 .singleItemBtns{
   width: 80%;
@@ -241,7 +251,8 @@ a{
 }
 .singleDesc{
   font-size: 15px;
-  /* font-weight: 200; */
+  font-size: 13px;
+  font-weight: 300;
 }
 /* disclaimer */
 .disclaimer{
