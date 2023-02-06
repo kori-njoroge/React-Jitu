@@ -1,5 +1,6 @@
 .App {
   background-color: #F5F5F5;
+  margin-bottom: 0;
 }
 
 .appContainer {
@@ -15,7 +16,8 @@
   background-color: white;
   box-shadow: 1px 1px 10px 1px #adabab;
 }
-hr{
+
+hr {
   color: #f7f6f6;
 }
 
@@ -86,6 +88,33 @@ hr{
   border: 1px solid;
 }
 
-.topdealsImg{
+.topdealsImg {
   height: 20vh;
+}
+
+/* Footer */
+.footer {
+  background-color: #0B0A28;
+  margin-top: 20px;
+}
+
+.lowerfooter {
+  width: 70%;
+  margin: auto;
+  padding-top: 10px;
+}
+.lowerfooter p{
+  font-size: 12px;
+  line-height: 1.5rem;
+  color:#8d8989;
+}
+
+.copyright{
+  background-color: #8E8E91;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  bottom: 0;
+  padding-top:   4px;
+  padding-bottom:4px;
 }

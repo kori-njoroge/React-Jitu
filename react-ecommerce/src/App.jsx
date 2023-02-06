@@ -1,5 +1,7 @@
 import './App.css';
+import Footer from './components/footer';
 import Home from './components/home';
+import Lowerfooter from './components/lowerFooter';
 import Navbar from './components/navbar';
 import TopCategories from './components/topCategories';
 import TopDeals from './components/topDeals';
@@ -19,6 +21,8 @@ function App() {
       <TopDeals />
       <TopProducts />
       </div>
+      <Footer />
+      <Lowerfooter />
     </div>
   );
 }
