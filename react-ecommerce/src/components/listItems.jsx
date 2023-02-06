@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export default function ListItems({ item }) {
+
     return (
         <div className="itemCard" key={item.id}>
             <div className="title">
@@ -11,7 +13,9 @@ export default function ListItems({ item }) {
             </div>
             <br />
             <h4 className='price'>${item.price}</h4>
-            <button>View Details</button>
+            <NavLink to={'/singleitem'}><button onClick={()=>{
+                window.localStorage.setItem("itemid",item.id);
+            }}>View Details</button></NavLink>
         </div>
     )
 }
