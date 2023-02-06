@@ -78,6 +78,7 @@ hr {
   text-align: center;
   padding-bottom: 10px;
   margin-left: 40px;
+  padding: 10px;
 }
 
 .itemCard p {
@@ -85,11 +86,18 @@ hr {
 }
 
 .itemCard img {
-  border: 1px solid;
+  border: 1px solid #e0dddd;
+  padding: 5px;
 }
 
 .topdealsImg {
   height: 20vh;
+}
+.itemTitle{
+  /* min-height: 20%; */
+}
+.price{
+  color: #F58B56;
 }
 
 /* Footer */
