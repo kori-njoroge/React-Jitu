@@ -29,7 +29,7 @@ export default function TopDeals() {
             <hr />
             <div className="itemsContainer">
                 {topDeals ? topDeals.map(item => (
-                    <ListItems item={item} />
+                    <ListItems key={item.id} item={item} />
                 )) : ''}
             </div>
         </div>

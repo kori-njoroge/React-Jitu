@@ -74,15 +74,15 @@ export default function Searchbar() {
             />
             <datalist id='brow1' className='data--list'>
                 {/* <option value={`All`}/> */}
-                {mapData && mapData.map(item => (
+                {mapData && mapData.map((item, index) => (
                     <option
-                        key={item.id}
+                        key={index}
                         value={item.title}
                         onClick={() => {
                             window.localStorage.setItem("itemid", item.id);
                         }}
                     >
-                        <NavLink to={'/singleitem'}>{`${item.title}`}</NavLink>
+                        {`${item.title}`}
                     </option>
                 ))}
             </datalist>

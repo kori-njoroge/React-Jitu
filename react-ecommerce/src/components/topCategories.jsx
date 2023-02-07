@@ -45,8 +45,8 @@ export default function TopCategories() {
                             window.localStorage.setItem("category",item);
                             console.log("me is", item)
                         }}>
-                            <p>{item}</p>
-                            <img src={hangleImages(item)} />
+                            <p >{item}</p>
+                            <img  src={hangleImages(item)} />
                         </div>
                     </NavLink>
                 )) : ""}

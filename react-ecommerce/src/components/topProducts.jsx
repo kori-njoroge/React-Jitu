@@ -29,9 +29,9 @@ export default function TopProducts() {
             </div>
             <hr />
             <div className="itemsContainer">
-                {topProducts ? topProducts.map(item => (
-                    <ListItems item={item} />
-                )) : ''}
+                {topProducts && topProducts.map(item => (
+                    <ListItems key={item.id} item={item} />
+                ))}
             </div>
         </div>
     )
