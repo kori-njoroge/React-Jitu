@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import ListItems from "./listItems";
 
 
@@ -22,6 +23,7 @@ export default function TopDeals() {
         <div className="topDeals" id="topDeals">
             <hr />
             <h2>Top Deals</h2>
+            <NavLink to={'/allproducts'}>See More</NavLink>
             <hr />
             <div className="itemsContainer">
                 {topDeals ? topDeals.map(item => (

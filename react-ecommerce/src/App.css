@@ -266,3 +266,8 @@ a{
 .disclaimer p{
   font-size: 13px;
 }
+
+/* all products */
+.allProducts{
+  margin: 30px 0px;
+}
