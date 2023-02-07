@@ -13,7 +13,7 @@ export default function AllProducts(){
             console.log(all);
         }
         getData()
-    })
+    },[])
 
     return(
         <>

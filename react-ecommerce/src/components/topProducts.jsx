@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import ListItems from "./listItems";
 
 export default function TopProducts() {
@@ -12,7 +13,7 @@ export default function TopProducts() {
             let electronics = await elec.json();
             let men = await data.json();
             let women = await data2.json();
-            setTopProducts([ ...women,...electronics, ...men]);
+            setTopProducts([...women, ...electronics, ...men]);
         }
         getData()
     }, [])
@@ -22,10 +23,13 @@ export default function TopProducts() {
     return (
         <div className="topProducts">
             <hr />
-            <h2>Top Products</h2>
+            <div className="heading">
+                <h2>Top Products</h2>
+                <NavLink to={'/allproducts'}>See More</NavLink>
+            </div>
             <hr />
             <div className="itemsContainer">
-            {topProducts ? topProducts.map(item => (
+                {topProducts ? topProducts.map(item => (
                     <ListItems item={item} />
                 )) : ''}
             </div>

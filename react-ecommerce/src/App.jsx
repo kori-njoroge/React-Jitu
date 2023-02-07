@@ -4,6 +4,7 @@ import All from './components/all'
 import Errorpage from './components/errorpage';
 import Singleitem from './components/singleitem';
 import AllProducts from './components/allproducts';
+import Category from './components/category';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/singleproduct' element ={<All/>}/>
           <Route path='/singleitem' element={<Singleitem />}/>
           <Route path='/allproducts' element={<AllProducts />}></Route>
+          <Route path='/category' element ={<Category />}></Route>
           <Route path='*' element={<Errorpage />}/>
         </Routes>
       </BrowserRouter>
