@@ -25,7 +25,7 @@ export default function Category() {
                     <ListItems key={prod.id} item ={prod}/>
                 ))}
             </div>
-            <Lowerfooter />
+            <Lowerfooter /> 
         </div>
     )
 }

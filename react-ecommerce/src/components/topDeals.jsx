@@ -22,8 +22,8 @@ export default function TopDeals() {
     return (
         <div className="topDeals" id="topDeals">
             <hr />
-            <div className="heading">
-            <h2>Top Deals</h2>
+            <div className="headings">
+            <h2 id="topdeals">Top Deals</h2>
             <NavLink to={'/allproducts'}>See More</NavLink>
             </div>
             <hr />

@@ -23,8 +23,8 @@ export default function TopProducts() {
     return (
         <div className="topProducts">
             <hr />
-            <div className="heading">
-                <h2>Top Products</h2>
+            <div className="headings">
+                <h2 id="topproducts">Top Products</h2>
                 <NavLink to={'/allproducts'}>See More</NavLink>
             </div>
             <hr />

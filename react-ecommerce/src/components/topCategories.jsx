@@ -36,7 +36,7 @@ export default function TopCategories() {
     return (
         <div className="topCategories" id="topCategories">
             <hr />
-            <h2>Top Categories</h2>
+            <h2 id="topcategories">Top Categories</h2>
             <hr />
             <div className="itemsContainer">
                 {menCat ? menCat.map((item, index) => (

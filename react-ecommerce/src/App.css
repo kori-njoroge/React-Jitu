@@ -55,7 +55,27 @@ a{
   color: #5E5E5E;
 }
 
+.cartsection{
+  margin-left: auto;
+  margin-right: 40px;
+  padding:33px 13px;
+  border-radius: 50%;
+  background-color: #86b7d8;
+  font-size: 25px;
+  color: white;
+}
 
+
+.cartsection span{
+  border: 1px solid white;
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  margin-top: -50px;
+  margin-left: 25px;
+  color: white;
+}
 /* HOME STYLES */
 .homecover {
   top: 0;
@@ -74,33 +94,45 @@ a{
 
 /* SEARCH BAR STYLES */
 .searchBar{
-  border: 1px solid;
+  /* border: 1px solid; */
+  border-radius: 0px 5px 5px 0px; 
   height: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
 }
 
-.searchHere {
+.dropDown{
   height: 100%;
+  border: 1px solid #e0dfdf;
+  border-right: none;
+  background-color: #FfFfFF;
+  padding: 0px 0px 0px 25px;
+  border-radius: 5px 0px 0px 5px;
+
+}
+
+option{
+  text-transform: capitalize;
+  font-size: 13px;
+}
+.searchHere {
   width: 30%;
-  /*
-  height: 35px;
-  border-radius: 5px;
-  border: 1px solid grey;
-  padding-left: 15px;
-  box-shadow: 1px 1px 10px 10px #ececec; */
+  border: 1px solid #e0dfdf;
+  border-right: none ;
+  border-left: none ;
+  width: 35%;
+  padding: 0px 20px;
+  font-size: 15px;  
 }
 
 .search {
-  height: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
-  /*height: inherit;
-  height: 39px;
-  margin-left: -7%;
-  font-size: 15px;
-  background-color: rgb(238, 153, 91);
-  color: white;
   border: none;
-  border-radius: 0px 5px 5px 0px; */
+  padding: 0px 30px;
+  color: white;
+  font-size: 20px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: rgb(237, 153, 92);
 }
 
 .itemsContainer {
@@ -271,3 +303,4 @@ a{
 .allProducts{
   margin: 30px 0px;
 }
+
