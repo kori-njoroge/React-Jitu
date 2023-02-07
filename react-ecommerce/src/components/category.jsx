@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ListItems from './listItems';
+import Lowerfooter from './lowerFooter';
 import Navbar from './navbar'
 
 export default function Category() {
@@ -18,11 +19,13 @@ export default function Category() {
     return (
         <div className='category'>
             <Navbar />
+
             <div className="categoryProds itemsContainer">
                 {catData && catData.map(prod =>(
                     <ListItems key={prod.id} item ={prod}/>
                 ))}
             </div>
+            <Lowerfooter />
         </div>
     )
 }
