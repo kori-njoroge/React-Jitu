@@ -18,8 +18,9 @@ function App() {
           <Route path='/' element ={<All/>}/>
           <Route path='/singleproduct' element ={<All/>}/>
           <Route path='/singleitem' element={<Singleitem />}/>
-          <Route path='/allproducts' element={<AllProducts />}></Route>
-          <Route path='/category' element ={<Category />}></Route>
+          <Route path='/singleitem/' element={<Singleitem />}/>
+          <Route path='/allproducts' element={<AllProducts />}/>
+          <Route path='/category' element ={<Category />}/>
           <Route path='*' element={<Errorpage />}/>
         </Routes>
       </BrowserRouter>

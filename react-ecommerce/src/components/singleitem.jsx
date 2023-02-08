@@ -15,7 +15,7 @@ export default function Singleitem() {
     useEffect(() => {
         async function getData() {
             let id = await window.localStorage.getItem('itemid');
-            let data = await fetch(`https://fakestoreapi.com/products/${id}`)
+            let data = await fetch(`https://fakestoreapi.com/products/${id}`);
             let itemjson = await data.json();
             setProduct(itemjson);
             console.log("item", itemjson);
