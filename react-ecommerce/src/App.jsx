@@ -17,8 +17,10 @@ function App() {
         <Routes>
           <Route path='/' element ={<All/>}/>
           <Route path='/singleproduct' element ={<All/>}/>
-          <Route path='/singleitem' element={<Singleitem />}/>
-          <Route path='/singleitem/' element={<Singleitem />}/>
+          <Route path='/:itemId' element={<Singleitem />}/>
+          <Route path='/allproducts' element={<AllProducts />}>
+            
+          </Route>
           <Route path='/allproducts' element={<AllProducts />}/>
           <Route path='/category' element ={<Category />}/>
           <Route path='*' element={<Errorpage />}/>

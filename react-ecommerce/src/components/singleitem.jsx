@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react'
-import ListItems from './listItems';
+import { useParams } from 'react-router-dom';
 import Navbar from './navbar'
 import Footer from './footer'
 import Lowerfooter from './lowerFooter';
 import Disclaimer from './disclaimer';
 
 export default function Singleitem() {
-
-
+    const {itemId} = useParams();
+    console.log(itemId);
     const [product, setProduct] = useState();
     const [count, setcount] = useState(1);
 
     
     useEffect(() => {
         async function getData() {
-            let id = await window.localStorage.getItem('itemid');
-            let data = await fetch(`https://fakestoreapi.com/products/${id}`);
+            // let id = await window.localStorage.getItem('itemid');
+            let data = await fetch(`https://fakestoreapi.com/products/${itemId}`);
             let itemjson = await data.json();
             setProduct(itemjson);
             console.log("item", itemjson);
@@ -37,7 +37,7 @@ export default function Singleitem() {
             <Navbar />
             <div className="itemContainerSingle">
                 <div className="imageContainer">
-                    <img src={product && product.image} alt="product Image" />
+                    <img src={product && product.image} alt="product" />
                 </div>
                 <div className="productDescription">
                     <h1>{product && product.title}</h1>

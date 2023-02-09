@@ -26,6 +26,7 @@ export default function All() {
       </div>
       <Footer />
       <Lowerfooter />
+      {/* <h1>Watu sio wajinga buana</h1> */}
     </div>
   );
 }
