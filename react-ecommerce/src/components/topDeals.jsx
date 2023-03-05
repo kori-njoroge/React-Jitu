@@ -5,6 +5,7 @@ import ListItems from "./listItems";
 
 export default function TopDeals() {
     const [topDeals, setTopDeals] = useState([]);
+    const[loading, setLoading]= useState(true)
 
     useEffect(() => {
         async function getData() {
@@ -15,6 +16,7 @@ export default function TopDeals() {
             let men = await data.json();
             let women = await data2.json();
             setTopDeals([...electronics, ...men, ...women]);
+            setLoading(false)
         }
         getData()
     }, [])
@@ -23,15 +25,19 @@ export default function TopDeals() {
         <div className="topDeals" id="topDeals">
             <hr />
             <div className="headings">
-            <h2 id="topdeals">Top Deals</h2>
-            <NavLink to={'/allproducts'}>See More</NavLink>
+                <h2 id="topdeals">Top Deals</h2>
+                <NavLink to={'/allproducts'}>See More</NavLink>
             </div>
             <hr />
-            <div className="itemsContainer">
-                {topDeals ? topDeals.map(item => (
-                    <ListItems key={item.id} item={item} />
-                )) : ''}
-            </div>
+            {loading ? <div className='donut-wrapper'>
+                <div className='donut multi'></div>
+            </div> :
+                <div className="itemsContainer">
+                    {topDeals ? topDeals.map(item => (
+                        <ListItems key={item.id} item={item} />
+                    )) : ''}
+                </div>
+            }
         </div>
     )
 }

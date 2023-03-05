@@ -15,15 +15,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element ={<All/>}/>
-          <Route path='/singleproduct' element ={<All/>}/>
-          <Route path='/:itemId' element={<Singleitem />}/>
+          <Route path='/' element={<All />} />
+          <Route path='/singleproduct' element={<All />} />
+          <Route path='/:itemId' element={<Singleitem />} />
           <Route path='/allproducts' element={<AllProducts />}>
-            
           </Route>
-          <Route path='/allproducts' element={<AllProducts />}/>
-          <Route path='/category' element ={<Category />}/>
-          <Route path='*' element={<Errorpage />}/>
+          <Route path='/allproducts' element={<AllProducts />} />
+          <Route path='/category/:cat' element={<Category />}/>
+          <Route path='*' element={<Errorpage />} />
         </Routes>
       </BrowserRouter>
     </div>

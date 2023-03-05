@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import ListItems from "./listItems";
 
 export default function TopProducts() {
+    const[loading, setLoading]= useState(true)
     const [topProducts, setTopProducts] = useState([]);
 
     useEffect(() => {
@@ -14,6 +15,7 @@ export default function TopProducts() {
             let men = await data.json();
             let women = await data2.json();
             setTopProducts([...women, ...electronics, ...men]);
+            setLoading(false)
         }
         getData()
     }, [])
@@ -28,11 +30,15 @@ export default function TopProducts() {
                 <NavLink to={'/allproducts'}>See More</NavLink>
             </div>
             <hr />
+            {loading ? <div className='donut-wrapper'>
+                <div className='donut multi'></div>
+            </div> :
             <div className="itemsContainer">
                 {topProducts && topProducts.map(item => (
                     <ListItems key={item.id} item={item} />
                 ))}
             </div>
+            }
         </div>
     )
 }

@@ -8,12 +8,15 @@ import TopDeals from './topDeals';
 import TopProducts from './topProducts';
 
 export default function All() {
-  const[cartItems, setcartItems]= useState(0);
-  
-  useEffect(()=>{
-    window.localStorage.setItem("count",cartItems);
-  },[cartItems])
-  
+  const [cartItems, setcartItems] = useState(0);
+
+  useEffect(() => {
+    window.localStorage.setItem("count", cartItems);
+  }, [cartItems])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   return (
     <div className="App">

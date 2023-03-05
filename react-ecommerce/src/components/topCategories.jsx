@@ -6,13 +6,14 @@ import jewelery from "../images/jewels.jpeg"
 
 export default function TopCategories() {
     const [menCat, setMenCat] = useState([]);
-
+    const[loading,setLoading]=useState(true)
     useEffect(() => {
         async function getData() {
             try {
                 const response = await fetch('https://fakestoreapi.com/products/categories');
                 const jsoon = await response.json();
                 setMenCat(await jsoon);
+                setLoading(false)
             } catch (e) {
                 console.log(e);
             }
@@ -39,8 +40,11 @@ export default function TopCategories() {
             <h2 id="topcategories">Top Categories</h2>
             <hr />
             <div className="itemsContainer">
+            {loading && <div className='donut-wrapper'>
+                <div className='donut multi'></div>
+            </div>}
                 {menCat ? menCat.map((item, index) => (
-                    <NavLink to={'/category'}>
+                    <NavLink to={`/category/${item}`}>
                         <div className="itemCard" key={index} onClick={() => {
                             window.localStorage.setItem("category",item);
                             console.log("me is", item)

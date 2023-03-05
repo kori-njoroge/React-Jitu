@@ -42,6 +42,30 @@ hr {
   padding: 0px 15px;
   background-color: #358DC7;
   color: white;
+  position:relative ;
+}
+.allCategories:hover .catDropdown{
+  display: block;
+}
+
+.catDropdown {
+  display: none;
+  padding: 2vh .5vw;
+  position:absolute ;
+  background-color: white;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  color: black;
+  border-radius: 3px;
+  margin-top: 2px;
+  margin-left: 1vw;
+  width: 10vw;
+  top: 15vh;
+  left: 0;
+}
+
+.catDropdown a {
+  display: block;
 }
 
 .fa-bars {
@@ -182,7 +206,7 @@ option {
   font-weight: bold;
 }
 
-.productImage img{
+.productImage img {
   border: 1px solid #e0dddd;
 }
 
@@ -346,4 +370,58 @@ option {
 /* all products */
 .allProducts {
   margin: 30px 0px;
+}
+
+/* categoryProds */
+.categoryProds{
+  display:grid;
+  grid-template-columns: auto auto auto auto;
+  width: 80%;
+  margin: auto;
+  margin-top: 4vh;
+  padding-top: 1vh;
+}
+.categoryProds > div{
+  width: 20vw;
+}
+.categoryProds > div img{
+  width: 100%;
+}
+
+/* loader */
+.donut-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2vh;
+}
+
+.donut{
+  width: 3rem;
+  height: 3rem;
+  /* margin: 5rem; */
+  border-radius: 50%;
+  /* border: 0.3rem solid #4492a5; */
+  border: 0.3rem solid #003d4c44;
+  border-top-color:#003d4c ;
+  animation: 1s spin infinite linear;
+  animation-duration: 3s;
+}
+
+.multi{
+  border-bottom-color: #003d4c;
+}
+
+@keyframes spin{
+  to{
+      transform: rotate(360deg);
+  }
+}
+
+.naavHome{
+  /* margin-left: 2vw; */
+  margin-left: auto;
+  margin-right:2vw ;
+  font-weight: 500;
 }
